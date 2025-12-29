@@ -2,9 +2,9 @@
 ## 项目概述
 
 这是一个基于**论文开源代码**的人脸识别系统，使用训练的权重文件实现正面和侧面人脸识别。系统提供了友好的Web界面，支持多种录入方式和实时识别功能。
+
 2025年《pose Attention-Guided Profile-to-Frontal Face Recognition》论文模型
 https://github.com/TataMoktari/Pose-Attention-Guided-Profile-to-Frontal-Face-Recognition/tree/main
-<img width="2102" height="238" alt="image" src="https://github.com/user-attachments/assets/0849a721-afe4-461a-94d7-5b1b23035125" />
 
 
 ### 关键更新
@@ -370,4 +370,5 @@ python -m http.server 8080
 ## License
 
 本项目基于原论文开源代码实现，仅供学习研究使用。
+
 
