@@ -48,13 +48,13 @@ try:
     logger.info("✓ 图像处理器初始化成功")
     
     logger.info("=" * 60)
-    logger.info("🎉 系统初始化完成！")
+    logger.info(" 系统初始化完成！")
     logger.info(f"   数据库人脸数: {face_db.get_size()}")
     logger.info(f"   运行设备: {face_recognizer.device}")
     logger.info("=" * 60)
     
 except Exception as e:
-    logger.error(f"❌ 系统初始化失败: {e}")
+    logger.error(f" 系统初始化失败: {e}")
     raise
 
 # 配置
@@ -265,7 +265,7 @@ def recognize():
     try:
         data = request.json
         image_data = data.get('image')
-        threshold = data.get('threshold', 0.6)  # 相似度阈值
+        threshold = data.get('threshold', 0.6)
         
         if not image_data:
             return jsonify({'error': 'Missing image'}), 400
@@ -283,39 +283,74 @@ def recognize():
                 'message': 'No faces detected'
             })
         
-        # 识别每个人脸
+        # 准备数据容器
         results = []
+        box_labels = []   # 用于画图的标签 (序号)
+        box_colors = []   # 用于画图的颜色
+        
+        # 识别每个人脸
         for idx, face_box in enumerate(faces):
+            # 序号从1开始
+            face_idx = idx + 1
+            
             face_image = image_processor.crop_face(image, face_box)
-            embedding = face_recognizer.extract_embedding(face_image)
+            
+            # 1. 获取姿态 (frontal/profile)
+            pose = face_recognizer.estimate_pose(face_image)
+            
+            # 提取特征 (传入已计算的pose以避免重复计算)
+            embedding = face_recognizer.extract_embedding(face_image, pose=pose)
             
             # 在数据库中搜索
             match = face_db.search_face(embedding, threshold)
             
+            result_entry = {
+                'index': face_idx,
+                'box': face_box.tolist(),
+                'pose': pose,  # 添加姿态字段
+            }
+            
             if match:
-                results.append({
-                    'index': idx,
-                    'box': face_box.tolist(),
+                result_entry.update({
                     'recognized': True,
                     'name': match['name'],
                     'confidence': float(match['similarity']),
                     'face_id': match['face_id']
                 })
+                # 识别成功：绿色
+                box_colors.append((0, 255, 0))
             else:
-                results.append({
-                    'index': idx,
-                    'box': face_box.tolist(),
+                result_entry.update({
                     'recognized': False,
                     'name': 'Unknown',
                     'confidence': 0.0
                 })
+                # 识别失败：红色
+                box_colors.append((255, 0, 0))
+            
+            results.append(result_entry)
+            box_labels.append(str(face_idx))
+            
+        # 2. 在原图上绘制框和序号
+        # 注意：我们需要传入 list of boxes (numpy arrays)
+        labeled_image = image_processor.draw_boxes(
+            image, 
+            faces, 
+            labels=box_labels, 
+            colors=box_colors
+        )
+        
+        # 编码回 base64
+        labeled_image_base64 = image_processor.encode_image_to_base64(labeled_image)
         
         return jsonify({
             'detected_faces': len(faces),
-            'results': results
+            'results': results,
+            'labeled_image': labeled_image_base64  # 返回处理后的图片
         })
         
     except Exception as e:
+        logger.error(f"识别错误: {e}", exc_info=True)
         return jsonify({'error': str(e)}), 500
 
 
@@ -357,12 +392,12 @@ def clear_database():
 
 if __name__ == '__main__':
     print("\n" + "=" * 60)
-    print("🚀 启动人脸识别服务器")
+    print(" 启动人脸识别服务器")
     print("=" * 60)
     
     # 验证配置
     if not config.validate_config():
-        print("\n⚠️  配置验证失败，请检查上述错误！")
+        print("\n  配置验证失败，请检查上述错误！")
         print("提示: 确保以下文件存在:")
         print(f"  1. 训练权重: {config.TRAINED_WEIGHTS}")
         print(f"  2. Hopenet权重: {config.HOPENET_WEIGHTS}")
