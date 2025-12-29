@@ -1,120 +1,123 @@
-# ÈËÁ³Ê¶±ðÏµÍ³ - ÍêÕûÊµÏÖÎÄµµ (¸üÐÂ°æ)
+# äººè„¸è¯†åˆ«ç³»ç»Ÿ - å®Œæ•´å®žçŽ°æ–‡æ¡£
+## é¡¹ç›®æ¦‚è¿°
 
-## ? ÏîÄ¿¸ÅÊö
+è¿™æ˜¯ä¸€ä¸ªåŸºäºŽ**è®ºæ–‡å¼€æºä»£ç **çš„äººè„¸è¯†åˆ«ç³»ç»Ÿï¼Œä½¿ç”¨è®­ç»ƒçš„æƒé‡æ–‡ä»¶å®žçŽ°æ­£é¢å’Œä¾§é¢äººè„¸è¯†åˆ«ã€‚ç³»ç»Ÿæä¾›äº†å‹å¥½çš„Webç•Œé¢ï¼Œæ”¯æŒå¤šç§å½•å…¥æ–¹å¼å’Œå®žæ—¶è¯†åˆ«åŠŸèƒ½ã€‚
+2025å¹´ã€Špose Attention-Guided Profile-to-Frontal Face Recognitionã€‹è®ºæ–‡æ¨¡åž‹
+https://github.com/TataMoktari/Pose-Attention-Guided-Profile-to-Frontal-Face-Recognition/tree/main
+<img width="2102" height="238" alt="image" src="https://github.com/user-attachments/assets/0849a721-afe4-461a-94d7-5b1b23035125" />
 
-ÕâÊÇÒ»¸ö»ùÓÚ**ÂÛÎÄ¿ªÔ´´úÂë**µÄÈËÁ³Ê¶±ðÏµÍ³£¬Ê¹ÓÃÄãÑµÁ·µÄÈ¨ÖØÎÄ¼þÊµÏÖÕýÃæºÍ²àÃæÈËÁ³Ê¶±ð¡£ÏµÍ³Ìá¹©ÁËÓÑºÃµÄWeb½çÃæ£¬Ö§³Ö¶àÖÖÂ¼Èë·½Ê½ºÍÊµÊ±Ê¶±ð¹¦ÄÜ¡£
 
-### ? ¹Ø¼ü¸üÐÂ
+### å…³é”®æ›´æ–°
 
-1. **Ê¹ÓÃÄãµÄÑµÁ·È¨ÖØ**: `32_LR0.0001_MARGIN1.4_model_resnet_26_VALID_BEST.pt`
-2. **ÍêÕû¼¯³ÉÂÛÎÄ×é¼þ**: Hopenet×ËÌ¬¹À¼Æ + InceptionResnetV1 + CBAM×¢ÒâÁ¦
-3. **ÎÞÐèÖØÐÂÑµÁ·**: »ùÓÚÌØÕ÷ÌáÈ¡µÄÊ¶±ð·½Ê½
-4. **×Ô¶¯×ËÌ¬¼ì²â**: ×Ô¶¯ÅÐ¶ÏÕýÃæ/²àÃæ²¢Ñ¡Ôñ×î¼Ñ·ÖÖ§
+1. **ä½¿ç”¨è®­ç»ƒæƒé‡**: `32_LR0.0001_MARGIN1.4_model_resnet_26_VALID_BEST.pt`
+2. **å®Œæ•´é›†æˆè®ºæ–‡ç»„ä»¶**: Hopenetå§¿æ€ä¼°è®¡ + InceptionResnetV1 + CBAMæ³¨æ„åŠ›
+3. **æ— éœ€é‡æ–°è®­ç»ƒ**: åŸºäºŽç‰¹å¾æå–çš„è¯†åˆ«æ–¹å¼
+4. **è‡ªåŠ¨å§¿æ€æ£€æµ‹**: è‡ªåŠ¨åˆ¤æ–­æ­£é¢/ä¾§é¢å¹¶é€‰æ‹©æœ€ä½³åˆ†æ”¯
 
-### ºËÐÄ¹¦ÄÜ
+### æ ¸å¿ƒåŠŸèƒ½
 
-1. **Õý²àÃæÈËÁ³Ê¶±ð** - Ê¹ÓÃPose-AwareÄ£ÐÍ£¬Ö§³Ö²»Í¬½Ç¶ÈµÄÈËÁ³Ê¶±ð
-2. **µ¥ÕÅÂ¼Èë** - µ¥ÕÅÈËÁ³ÕÕÆ¬Â¼Èë
-3. **ÅúÁ¿Â¼Èë** - Ò»´ÎÉÏ´«¶àÕÅµ¥ÈËÕÕÆ¬
-4. **ºÏÕÕÂ¼Èë** - ´ÓºÏÕÕÖÐ×Ô¶¯¼ì²â²¢ÅúÁ¿Â¼Èë¶àÕÅÈËÁ³
-5. **ÊµÊ±Ê¶±ð** - ÉÏ´«ÕÕÆ¬¼´¿ÉÊ¶±ðÆäÖÐµÄËùÓÐÈËÁ³
-6. **Êý¾Ý¿â¹ÜÀí** - ²é¿´¡¢É¾³ý¡¢Çå¿ÕÊý¾Ý¿â
+1. **æ­£ä¾§é¢äººè„¸è¯†åˆ«** - ä½¿ç”¨Pose-Awareæ¨¡åž‹ï¼Œæ”¯æŒä¸åŒè§’åº¦çš„äººè„¸è¯†åˆ«
+2. **å•å¼ å½•å…¥** - å•å¼ äººè„¸ç…§ç‰‡å½•å…¥
+3. **æ‰¹é‡å½•å…¥** - ä¸€æ¬¡ä¸Šä¼ å¤šå¼ å•äººç…§ç‰‡
+4. **åˆç…§å½•å…¥** - ä»Žåˆç…§ä¸­è‡ªåŠ¨æ£€æµ‹å¹¶æ‰¹é‡å½•å…¥å¤šå¼ äººè„¸
+5. **å®žæ—¶è¯†åˆ«** - ä¸Šä¼ ç…§ç‰‡å³å¯è¯†åˆ«å…¶ä¸­çš„æ‰€æœ‰äººè„¸
+6. **æ•°æ®åº“ç®¡ç†** - æŸ¥çœ‹ã€åˆ é™¤ã€æ¸…ç©ºæ•°æ®åº“
 
-## ?? ÏîÄ¿¼Ü¹¹
+## é¡¹ç›®æž¶æž„
 
 ```
 face-recognition-system/
-©À©¤©¤ backend/
-©¦   ©À©¤©¤ app.py                          # FlaskÖ÷Ó¦ÓÃ
-©¦   ©À©¤©¤ models/
-©¦   ©¦   ©À©¤©¤ face_detector.py            # MTCNNÈËÁ³¼ì²âÆ÷
-©¦   ©¦   ©¸©¤©¤ pose_aware_model.py         # Õý²àÃæÊ¶±ðÄ£ÐÍ·â×°
-©¦   ©À©¤©¤ utils/
-©¦   ©¦   ©À©¤©¤ face_database.py            # ÈËÁ³Êý¾Ý¿â¹ÜÀí
-©¦   ©¦   ©¸©¤©¤ image_processor.py          # Í¼Ïñ´¦Àí¹¤¾ß
-©¦   ©À©¤©¤ requirements.txt                # PythonÒÀÀµ
-©¦   ©¸©¤©¤ [Ô­ÏîÄ¿ÎÄ¼þ]                     # Facenet_tune.py, MyModel.pyµÈ
-©À©¤©¤ frontend/
-©¦   ©¸©¤©¤ index.html                      # Ç°¶Ë½çÃæ
-©À©¤©¤ data/
-©¦   ©À©¤©¤ face_database/                  # ÈËÁ³Êý¾Ý´æ´¢
-©¦   ©¦   ©À©¤©¤ embeddings.pkl              # ÌØÕ÷ÏòÁ¿
-©¦   ©¦   ©À©¤©¤ metadata.json               # ÔªÊý¾Ý
-©¦   ©¦   ©¸©¤©¤ images/                     # ÈËÁ³Í¼Ïñ
-©¦   ©¸©¤©¤ uploads/                        # ÁÙÊ±ÉÏ´«ÎÄ¼þ
-©¸©¤©¤ models/
-    ©¸©¤©¤ hopenet_robust_alpha1.pkl       # Ô¤ÑµÁ·Ä£ÐÍÈ¨ÖØ
+â”œâ”€â”€ backend/
+â”‚   â”œâ”€â”€ app.py                          # Flaskä¸»åº”ç”¨
+â”‚   â”œâ”€â”€ models/
+â”‚   â”‚   â”œâ”€â”€ face_detector.py            # MTCNNäººè„¸æ£€æµ‹å™¨
+â”‚   â”‚   â””â”€â”€ pose_aware_model.py         # æ­£ä¾§é¢è¯†åˆ«æ¨¡åž‹å°è£…
+â”‚   â”œâ”€â”€ utils/
+â”‚   â”‚   â”œâ”€â”€ face_database.py            # äººè„¸æ•°æ®åº“ç®¡ç†
+â”‚   â”‚   â””â”€â”€ image_processor.py          # å›¾åƒå¤„ç†å·¥å…·
+â”‚   â”œâ”€â”€ requirements.txt                # Pythonä¾èµ–
+â”‚   â””â”€â”€ [åŽŸé¡¹ç›®æ–‡ä»¶]                     # Facenet_tune.py, MyModel.pyç­‰
+â”œâ”€â”€ frontend/
+â”‚   â””â”€â”€ index.html                      # å‰ç«¯ç•Œé¢
+â”œâ”€â”€ data/
+â”‚   â”œâ”€â”€ face_database/                  # äººè„¸æ•°æ®å­˜å‚¨
+â”‚   â”‚   â”œâ”€â”€ embeddings.pkl              # ç‰¹å¾å‘é‡
+â”‚   â”‚   â”œâ”€â”€ metadata.json               # å…ƒæ•°æ®
+â”‚   â”‚   â””â”€â”€ images/                     # äººè„¸å›¾åƒ
+â”‚   â””â”€â”€ uploads/                        # ä¸´æ—¶ä¸Šä¼ æ–‡ä»¶
+â””â”€â”€ models/
+    â””â”€â”€ hopenet_robust_alpha1.pkl       # é¢„è®­ç»ƒæ¨¡åž‹æƒé‡
 ```
 
-## ? ¼¼ÊõÊµÏÖÏê½â
+## æŠ€æœ¯å®žçŽ°è¯¦è§£
 
-### 1. ºó¶Ë¼Ü¹¹ (Flask + PyTorch)
+### 1. åŽç«¯æž¶æž„ (Flask + PyTorch)
 
-#### app.py - ºËÐÄAPI·þÎñ
+#### app.py - æ ¸å¿ƒAPIæœåŠ¡
 
-Ìá¹©ÒÔÏÂRESTful API½Ó¿Ú£º
+æä¾›ä»¥ä¸‹RESTful APIæŽ¥å£ï¼š
 
-- `GET /api/health` - ½¡¿µ¼ì²é
-- `POST /api/enroll/single` - µ¥ÕÅÈËÁ³Â¼Èë
-- `POST /api/enroll/batch` - ÅúÁ¿ÈËÁ³Â¼Èë
-- `POST /api/enroll/group` - ºÏÕÕÅúÁ¿Â¼Èë
-- `POST /api/recognize` - ÈËÁ³Ê¶±ð
-- `GET /api/database/list` - ÁÐ³öËùÓÐÈËÁ³
-- `DELETE /api/database/delete/<face_id>` - É¾³ýÖ¸¶¨ÈËÁ³
-- `DELETE /api/database/clear` - Çå¿ÕÊý¾Ý¿â
+- `GET /api/health` - å¥åº·æ£€æŸ¥
+- `POST /api/enroll/single` - å•å¼ äººè„¸å½•å…¥
+- `POST /api/enroll/batch` - æ‰¹é‡äººè„¸å½•å…¥
+- `POST /api/enroll/group` - åˆç…§æ‰¹é‡å½•å…¥
+- `POST /api/recognize` - äººè„¸è¯†åˆ«
+- `GET /api/database/list` - åˆ—å‡ºæ‰€æœ‰äººè„¸
+- `DELETE /api/database/delete/<face_id>` - åˆ é™¤æŒ‡å®šäººè„¸
+- `DELETE /api/database/clear` - æ¸…ç©ºæ•°æ®åº“
 
-**¹Ø¼üÊµÏÖ**£º
-- Ê¹ÓÃFlask-CORS½â¾ö¿çÓòÎÊÌâ
-- Base64±àÂë´«ÊäÍ¼ÏñÊý¾Ý
-- Òì²½´¦ÀíÍ¼ÏñÉÏ´«ºÍÊ¶±ð
+**å…³é”®å®žçŽ°**ï¼š
+- ä½¿ç”¨Flask-CORSè§£å†³è·¨åŸŸé—®é¢˜
+- Base64ç¼–ç ä¼ è¾“å›¾åƒæ•°æ®
+- å¼‚æ­¥å¤„ç†å›¾åƒä¸Šä¼ å’Œè¯†åˆ«
 
-#### pose_aware_model.py - Ä£ÐÍ·â×°
+#### pose_aware_model.py - æ¨¡åž‹å°è£…
 
-**ºËÐÄ¹¦ÄÜ**£º
+**æ ¸å¿ƒåŠŸèƒ½**ï¼š
 ```python
 class PoseAwareFaceRecognition:
     def extract_embedding(self, image, pose='auto'):
-        # ÌáÈ¡512Î¬ÈËÁ³ÌØÕ÷ÏòÁ¿
-        # Ö§³Öfrontal(ÕýÃæ)ºÍprofile(²àÃæ)Á½ÖÖÄ£Ê½
+        # æå–512ç»´äººè„¸ç‰¹å¾å‘é‡
+        # æ”¯æŒfrontal(æ­£é¢)å’Œprofile(ä¾§é¢)ä¸¤ç§æ¨¡å¼
         
     def compute_similarity(self, embedding1, embedding2):
-        # ¼ÆËãÓàÏÒÏàËÆ¶È
+        # è®¡ç®—ä½™å¼¦ç›¸ä¼¼åº¦
 ```
 
-**Ä£ÐÍ¹¤×÷Á÷³Ì**£º
-1. Í¼ÏñÔ¤´¦Àí£¨160x160, ¹éÒ»»¯£©
-2. Í¨¹ýInceptionResnetV1ÌáÈ¡ÌØÕ÷
-3. ¶ÔÓÚ²àÃæÕÕÆ¬£¬Ê¹ÓÃHopeNet¹À¼Æ×ËÌ¬
-4. Í¨¹ýCBAM×¢ÒâÁ¦»úÖÆÔöÇ¿ÌØÕ÷
-5. Êä³öL2¹éÒ»»¯µÄ512Î¬ÏòÁ¿
+**æ¨¡åž‹å·¥ä½œæµç¨‹**ï¼š
+1. å›¾åƒé¢„å¤„ç†ï¼ˆ160x160, å½’ä¸€åŒ–ï¼‰
+2. é€šè¿‡InceptionResnetV1æå–ç‰¹å¾
+3. å¯¹äºŽä¾§é¢ç…§ç‰‡ï¼Œä½¿ç”¨HopeNetä¼°è®¡å§¿æ€
+4. é€šè¿‡CBAMæ³¨æ„åŠ›æœºåˆ¶å¢žå¼ºç‰¹å¾
+5. è¾“å‡ºL2å½’ä¸€åŒ–çš„512ç»´å‘é‡
 
-#### face_detector.py - ÈËÁ³¼ì²â
+#### face_detector.py - äººè„¸æ£€æµ‹
 
-Ê¹ÓÃMTCNN (Multi-task Cascaded Convolutional Networks)£º
+ä½¿ç”¨MTCNN (Multi-task Cascaded Convolutional Networks)ï¼š
 
-**Èý½×¶Î¼ì²â**£º
-1. P-Net£º¿ìËÙÉú³ÉºòÑ¡´°¿Ú
-2. R-Net£º¾«Á¶ºòÑ¡´°¿Ú
-3. O-Net£ºÊä³ö×îÖÕ±ß½ç¿òºÍ¹Ø¼üµã
+**ä¸‰é˜¶æ®µæ£€æµ‹**ï¼š
+1. P-Netï¼šå¿«é€Ÿç”Ÿæˆå€™é€‰çª—å£
+2. R-Netï¼šç²¾ç‚¼å€™é€‰çª—å£
+3. O-Netï¼šè¾“å‡ºæœ€ç»ˆè¾¹ç•Œæ¡†å’Œå…³é”®ç‚¹
 
-**²ÎÊýÉèÖÃ**£º
+**å‚æ•°è®¾ç½®**ï¼š
 ```python
 MTCNN(
-    image_size=160,      # Êä³ö³ß´ç
-    margin=20,           # ±ß¾à
-    min_face_size=40,    # ×îÐ¡ÈËÁ³³ß´ç
-    thresholds=[0.6, 0.7, 0.7],  # Èý½×¶ÎãÐÖµ
-    factor=0.709         # ½ð×ÖËþËõ·ÅÒò×Ó
+    image_size=160,      # è¾“å‡ºå°ºå¯¸
+    margin=20,           # è¾¹è·
+    min_face_size=40,    # æœ€å°äººè„¸å°ºå¯¸
+    thresholds=[0.6, 0.7, 0.7],  # ä¸‰é˜¶æ®µé˜ˆå€¼
+    factor=0.709         # é‡‘å­—å¡”ç¼©æ”¾å› å­
 )
 ```
 
-#### face_database.py - Êý¾Ý¿â¹ÜÀí
+#### face_database.py - æ•°æ®åº“ç®¡ç†
 
-**´æ´¢½á¹¹**£º
+**å­˜å‚¨ç»“æž„**ï¼š
 ```python
 {
     "face_id": {
-        "name": "ÕÅÈý",
+        "name": "å¼ ä¸‰",
         "timestamp": "2024-01-01T12:00:00",
         "image_path": "data/face_database/images/uuid.jpg",
         "embedding_shape": [512]
@@ -122,261 +125,249 @@ MTCNN(
 }
 ```
 
-**ËÑË÷Ëã·¨**£º
-- ÓàÏÒÏàËÆ¶È¼ÆËã£º`similarity = dot(v1, v2)`
-- ãÐÖµ¹ýÂË£¨Ä¬ÈÏ0.6£©
-- ·µ»Ø×î¸ßÏàËÆ¶ÈÆ¥Åä
+**æœç´¢ç®—æ³•**ï¼š
+- ä½™å¼¦ç›¸ä¼¼åº¦è®¡ç®—ï¼š`similarity = dot(v1, v2)`
+- é˜ˆå€¼è¿‡æ»¤ï¼ˆé»˜è®¤0.6ï¼‰
+- è¿”å›žæœ€é«˜ç›¸ä¼¼åº¦åŒ¹é…
 
-### 2. Ç°¶Ë¼Ü¹¹ (Ô­ÉúJS + HTML5)
+### 2. å‰ç«¯æž¶æž„ (åŽŸç”ŸJS + HTML5)
 
-#### ½çÃæÉè¼Æ
+#### ç•Œé¢è®¾è®¡
 
-**ËÄ´ó¹¦ÄÜÇø**£º
-1. **ÈËÁ³Â¼Èë¿¨Æ¬** - Èý¸ö±êÇ©Ò³£¨µ¥ÕÅ/ÅúÁ¿/ºÏÕÕ£©
-2. **ÈËÁ³Ê¶±ð¿¨Æ¬** - ÉÏ´«Ê¶±ðÕÕÆ¬
-3. **Êý¾Ý¿â¹ÜÀí¿¨Æ¬** - Í³¼ÆÐÅÏ¢ºÍÈËÁ³ÁÐ±í
+**å››å¤§åŠŸèƒ½åŒº**ï¼š
+1. **äººè„¸å½•å…¥å¡ç‰‡** - ä¸‰ä¸ªæ ‡ç­¾é¡µï¼ˆå•å¼ /æ‰¹é‡/åˆç…§ï¼‰
+2. **äººè„¸è¯†åˆ«å¡ç‰‡** - ä¸Šä¼ è¯†åˆ«ç…§ç‰‡
+3. **æ•°æ®åº“ç®¡ç†å¡ç‰‡** - ç»Ÿè®¡ä¿¡æ¯å’Œäººè„¸åˆ—è¡¨
 
-**½»»¥Á÷³Ì**£º
+**äº¤äº’æµç¨‹**ï¼š
 
 ```
-ÓÃ»§ÉÏ´«Í¼Æ¬
-    ¡ý
-FileReader¶ÁÈ¡ÎªBase64
-    ¡ý
-·¢ËÍµ½ºó¶ËAPI
-    ¡ý
-ºó¶Ë´¦Àí·µ»Ø½á¹û
-    ¡ý
-Ç°¶ËäÖÈ¾ÏÔÊ¾
+ç”¨æˆ·ä¸Šä¼ å›¾ç‰‡
+    â†“
+FileReaderè¯»å–ä¸ºBase64
+    â†“
+å‘é€åˆ°åŽç«¯API
+    â†“
+åŽç«¯å¤„ç†è¿”å›žç»“æžœ
+    â†“
+å‰ç«¯æ¸²æŸ“æ˜¾ç¤º
 ```
 
-#### ¹Ø¼ü¹¦ÄÜÊµÏÖ
+#### å…³é”®åŠŸèƒ½å®žçŽ°
 
-**Í¼ÏñÉÏ´«**£º
+**å›¾åƒä¸Šä¼ **ï¼š
 ```javascript
 const reader = new FileReader();
 reader.onload = (e) => {
     const base64Image = e.target.result;
-    // ·¢ËÍµ½ºó¶Ë
+    // å‘é€åˆ°åŽç«¯
 };
 reader.readAsDataURL(file);
 ```
 
-**ºÏÕÕÂ¼Èë**£º
-1. ÉÏ´«ºÏÕÕ ¡ú ºó¶ËMTCNN¼ì²âËùÓÐÈËÁ³
-2. ·µ»Ø²Ã¼ôºóµÄÈËÁ³Í¼Ïñ
-3. ÓÃ»§ÎªÃ¿ÕÅÁ³±ê×¢ÐÕÃû
-4. ÅúÁ¿Ìá½»Â¼Èë
+**åˆç…§å½•å…¥**ï¼š
+1. ä¸Šä¼ åˆç…§ â†’ åŽç«¯MTCNNæ£€æµ‹æ‰€æœ‰äººè„¸
+2. è¿”å›žè£å‰ªåŽçš„äººè„¸å›¾åƒ
+3. ç”¨æˆ·ä¸ºæ¯å¼ è„¸æ ‡æ³¨å§“å
+4. æ‰¹é‡æäº¤å½•å…¥
 
-## ? ¿ìËÙ¿ªÊ¼
+## å¿«é€Ÿå¼€å§‹
 
-### Ç°ÖÃ×¼±¸
+### å‰ç½®å‡†å¤‡
 
-**±ØÐèÎÄ¼þ£¨À´×ÔÄãµÄÑµÁ·£©£º**
+**å¿…éœ€æ–‡ä»¶ï¼ˆæ¥è‡ªè®­ç»ƒï¼‰ï¼š**
 ```bash
 models/
-©À©¤©¤ 32_LR0.0001_MARGIN1.4_model_resnet_26_VALID_BEST.pt  # ÄãÑµÁ·µÄ×î¼ÑÈ¨ÖØ
-©¸©¤©¤ hopenet_robust_alpha1.pkl                              # Hopenet×ËÌ¬¹À¼ÆÈ¨ÖØ
+â”œâ”€â”€ 32_LR0.0001_MARGIN1.4_model_resnet_26_VALID_BEST.pt  # è®­ç»ƒçš„æœ€ä½³æƒé‡
+â””â”€â”€ hopenet_robust_alpha1.pkl                              # Hopenetå§¿æ€ä¼°è®¡æƒé‡
 ```
 
-**±ØÐèÔ´´úÂë£¨À´×ÔÂÛÎÄGitHub£©£º**
+**å¿…éœ€æºä»£ç ï¼ˆæ¥è‡ªè®ºæ–‡GitHubï¼‰ï¼š**
 ```bash
 backend/
-©À©¤©¤ Facenet_tune.py           # FacePoseAwareNetÄ£ÐÍ¶¨Òå
-©À©¤©¤ MyModel.py                # Hopenet·â×°
-©À©¤©¤ hopenet.py                # Hopenet¼Ü¹¹
-©À©¤©¤ Attention_block.py        # ×¢ÒâÁ¦Ä£¿é
-©À©¤©¤ MODELS/                   # ×¢ÒâÁ¦»úÖÆ
-©¦   ©À©¤©¤ cbam.py
-©¦   ©¸©¤©¤ bam.py
-©¸©¤©¤ nnmodels/                 # InceptionResnetV1ºÍMTCNN
-    ©À©¤©¤ inception_resnet_v1.py
-    ©À©¤©¤ mtcnn.py
-    ©¸©¤©¤ utils/
+â”œâ”€â”€ Facenet_tune.py           # FacePoseAwareNetæ¨¡åž‹å®šä¹‰
+â”œâ”€â”€ MyModel.py                # Hopenetå°è£…
+â”œâ”€â”€ hopenet.py                # Hopenetæž¶æž„
+â”œâ”€â”€ Attention_block.py        # æ³¨æ„åŠ›æ¨¡å—
+â”œâ”€â”€ MODELS/                   # æ³¨æ„åŠ›æœºåˆ¶
+â”‚   â”œâ”€â”€ cbam.py
+â”‚   â””â”€â”€ bam.py
+â””â”€â”€ nnmodels/                 # InceptionResnetV1å’ŒMTCNN
+    â”œâ”€â”€ inception_resnet_v1.py
+    â”œâ”€â”€ mtcnn.py
+    â””â”€â”€ utils/
 ```
 
-### Ò»¼üÆô¶¯
+### ä¸€é”®å¯åŠ¨
 
-**Linux/Mac:**
+**æ‰‹åŠ¨å¯åŠ¨:**
 ```bash
-cd backend
-chmod +x quick_start.sh
-./quick_start.sh
-```
-
-**Windows:**
-```bash
-cd backend
-quick_start.bat
-```
-
-**ÊÖ¶¯Æô¶¯:**
-```bash
-# 1. °²×°ÒÀÀµ
+# 1. å®‰è£…ä¾èµ–
 pip install -r requirements.txt
 
-# 2. ÑéÖ¤ÅäÖÃ
+# 2. éªŒè¯é…ç½®
 python config.py
 
-# 3. ²âÊÔÄ£ÐÍ£¨¿ÉÑ¡µ«ÍÆ¼ö£©
+# 3. æµ‹è¯•æ¨¡åž‹ï¼ˆå¯é€‰ä½†æŽ¨èï¼‰
 python test_model.py
 
-# 4. Æô¶¯ºó¶Ë
+# 4. å¯åŠ¨åŽç«¯
 python app.py
 
-# 5. Æô¶¯Ç°¶Ë£¨ÐÂÖÕ¶Ë£©
+# 5. å¯åŠ¨å‰ç«¯ï¼ˆæ–°ç»ˆç«¯ï¼‰
 cd frontend
 python -m http.server 8080
 
-# 6. ·ÃÎÊÏµÍ³
-# ´ò¿ªä¯ÀÀÆ÷: http://localhost:8080
-# Èç¹ûÊÇÔ¶³Ì·þÎñÆ÷£¬¾Í´ò¿ªhttp://172.28.6.43:8080 £¨ÖÐ¼äÌæ»»³É·þÎñÆ÷ip£©
+# 6. è®¿é—®ç³»ç»Ÿ
+# æ‰“å¼€æµè§ˆå™¨: http://localhost:8080
+# å¦‚æžœæ˜¯è¿œç¨‹æœåŠ¡å™¨ï¼Œå°±æ‰“å¼€http://172.28.6.43:8080 ï¼ˆä¸­é—´æ›¿æ¢æˆæœåŠ¡å™¨ipï¼‰
 ```
 
-## ? Ê¹ÓÃÖ¸ÄÏ
+## ä½¿ç”¨æŒ‡å—
 
-### µ¥ÕÅÂ¼Èë
-1. µã»÷"µ¥ÕÅÂ¼Èë"±êÇ©
-2. ÉÏ´«Ò»ÕÅÇåÎúµÄÈËÁ³ÕÕÆ¬
-3. ÊäÈëÐÕÃû
-4. µã»÷"Â¼ÈëÈËÁ³"
+### å•å¼ å½•å…¥
+1. ç‚¹å‡»"å•å¼ å½•å…¥"æ ‡ç­¾
+2. ä¸Šä¼ ä¸€å¼ æ¸…æ™°çš„äººè„¸ç…§ç‰‡
+3. è¾“å…¥å§“å
+4. ç‚¹å‡»"å½•å…¥äººè„¸"
 
-### ÅúÁ¿Â¼Èë
-1. µã»÷"ÅúÁ¿Â¼Èë"±êÇ©
-2. Ñ¡Ôñ¶àÕÅÈËÁ³ÕÕÆ¬
-3. ÎªÃ¿ÕÅÕÕÆ¬ÊäÈëÐÕÃû
-4. µã»÷"ÅúÁ¿Â¼Èë"
+### æ‰¹é‡å½•å…¥
+1. ç‚¹å‡»"æ‰¹é‡å½•å…¥"æ ‡ç­¾
+2. é€‰æ‹©å¤šå¼ äººè„¸ç…§ç‰‡
+3. ä¸ºæ¯å¼ ç…§ç‰‡è¾“å…¥å§“å
+4. ç‚¹å‡»"æ‰¹é‡å½•å…¥"
 
-### ºÏÕÕÂ¼Èë
-1. µã»÷"ºÏÕÕÂ¼Èë"±êÇ©
-2. ÉÏ´«Ò»ÕÅºÏÕÕ
-3. ÏµÍ³×Ô¶¯¼ì²âËùÓÐÈËÁ³
-4. ÎªÃ¿ÕÅ¼ì²âµ½µÄÁ³ÊäÈëÐÕÃû
-5. µã»÷"È·ÈÏÂ¼Èë"
+### åˆç…§å½•å…¥
+1. ç‚¹å‡»"åˆç…§å½•å…¥"æ ‡ç­¾
+2. ä¸Šä¼ ä¸€å¼ åˆç…§
+3. ç³»ç»Ÿè‡ªåŠ¨æ£€æµ‹æ‰€æœ‰äººè„¸
+4. ä¸ºæ¯å¼ æ£€æµ‹åˆ°çš„è„¸è¾“å…¥å§“å
+5. ç‚¹å‡»"ç¡®è®¤å½•å…¥"
 
-### ÈËÁ³Ê¶±ð
-1. ÔÚÓÒ²àÊ¶±ð¿¨Æ¬ÉÏ´«ÕÕÆ¬
-2. µã»÷"¿ªÊ¼Ê¶±ð"
-3. ²é¿´Ê¶±ð½á¹ûºÍÖÃÐÅ¶È
+### äººè„¸è¯†åˆ«
+1. åœ¨å³ä¾§è¯†åˆ«å¡ç‰‡ä¸Šä¼ ç…§ç‰‡
+2. ç‚¹å‡»"å¼€å§‹è¯†åˆ«"
+3. æŸ¥çœ‹è¯†åˆ«ç»“æžœå’Œç½®ä¿¡åº¦
 
-## ? ºËÐÄ¸ÅÄî£ºÎªÊ²Ã´²»ÐèÒªÖØÐÂÑµÁ·£¿
+## æ ¸å¿ƒæ¦‚å¿µï¼šä¸ºä»€ä¹ˆä¸éœ€è¦é‡æ–°è®­ç»ƒï¼Ÿ
 
-### ÌØÕ÷ÌáÈ¡ vs ·ÖÀà
+### ç‰¹å¾æå– vs åˆ†ç±»
 
-**·ÖÀàÏµÍ³£¨ÐèÒªÖØÐÂÑµÁ·£©£º**
+**åˆ†ç±»ç³»ç»Ÿï¼ˆéœ€è¦é‡æ–°è®­ç»ƒï¼‰ï¼š**
 ```
-Í¼Ïñ ¡ú CNN ¡ú Softmax(1000¸öÀà±ð) ¡ú Êä³öÀà±ðID
+å›¾åƒ â†’ CNN â†’ Softmax(1000ä¸ªç±»åˆ«) â†’ è¾“å‡ºç±»åˆ«ID
 ```
-Ã¿Ôö¼ÓÒ»¸öÐÂÈË£¬ÐèÒªÖØÐÂÑµÁ·Ä£ÐÍ¡£
+æ¯å¢žåŠ ä¸€ä¸ªæ–°äººï¼Œéœ€è¦é‡æ–°è®­ç»ƒæ¨¡åž‹ã€‚
 
-**ÌØÕ÷ÌáÈ¡ÏµÍ³£¨ÎÞÐèÖØÐÂÑµÁ·£©£º**
+**ç‰¹å¾æå–ç³»ç»Ÿï¼ˆæ— éœ€é‡æ–°è®­ç»ƒï¼‰ï¼š**
 ```
-Â¼Èë½×¶Î:
-ÐÂÈËÁ³ÕÕÆ¬ ¡ú Ä£ÐÍ ¡ú ÌáÈ¡512Î¬ÌØÕ÷ÏòÁ¿ ¡ú ´æÈëÊý¾Ý¿â (name: ÕÅÈý, embedding: [0.2, -0.1, ...])
+å½•å…¥é˜¶æ®µ:
+æ–°äººè„¸ç…§ç‰‡ â†’ æ¨¡åž‹ â†’ æå–512ç»´ç‰¹å¾å‘é‡ â†’ å­˜å…¥æ•°æ®åº“ (name: å¼ ä¸‰, embedding: [0.2, -0.1, ...])
 
-Ê¶±ð½×¶Î:
-´ýÊ¶±ðÕÕÆ¬ ¡ú Ä£ÐÍ ¡ú ÌáÈ¡512Î¬ÌØÕ÷ÏòÁ¿ ¡ú ¼ÆËãÓëÊý¾Ý¿âÖÐËùÓÐÌØÕ÷µÄÏàËÆ¶È ¡ú ·µ»Ø×îÏàËÆµÄÈË
-```
-
-### ¹¤×÷Á÷³Ì
-
-1. **Ä£ÐÍÈ¨ÖØ¹Ì¶¨**: Ê¹ÓÃÄãÑµÁ·ºÃµÄ`.pt`ÎÄ¼þ£¬È¨ÖØ²»ÔÙ¸Ä±ä
-2. **ÌáÈ¡ÌØÕ÷**: Ä£ÐÍ½«ÈËÁ³Í¼Ïñ×ª»»Îª512Î¬ÏòÁ¿
-3. **´æ´¢ÌØÕ÷**: ÌØÕ÷ÏòÁ¿±£´æÔÚÊý¾Ý¿âÖÐ
-4. **ÏàËÆ¶ÈÆ¥Åä**: Ê¶±ðÊ±¼ÆËãÓàÏÒÏàËÆ¶È£¬ÕÒµ½×îÏàËÆµÄÈË
-
-**Àà±ÈÀí½â£º**
-- Ä£ÐÍ¾ÍÏñÒ»¸ö"ÌØÕ÷ÌáÈ¡Æ÷"£¨¹Ì¶¨²»±ä£©
-- Ã¿¸öÈËµÄÌØÕ÷¾ÍÏñ"Ö¸ÎÆ"£¨¶ÀÒ»ÎÞ¶þ£©
-- Ê¶±ð¾ÍÊÇ"Ö¸ÎÆ±È¶Ô"£¨¼ÆËãÏàËÆ¶È£©
-
-### ÂÛÎÄÄ£ÐÍ¼Ü¹¹
-
-```
-ÊäÈëÍ¼Ïñ (160¡Á160)
-    ¡ý
-[MTCNN¼ì²â] ¡û ¼ì²â²¢¶ÔÆëÈËÁ³
-    ¡ý
-[×ËÌ¬¹À¼Æ - Hopenet] ¡ú yaw½Ç¶È
-    ¡ý
-  ÅÐ¶Ï×ËÌ¬
-    ©À©¤ yaw < 30¡ã ¡ú [ÕýÃæ·ÖÖ§ - InceptionResnetV1_f]
-    ©¸©¤ yaw > 30¡ã ¡ú [²àÃæ·ÖÖ§ - InceptionResnetV1_p]
-                      ¡ý
-                   [CBAM×¢ÒâÁ¦ÔöÇ¿]
-    ¡ý
-512Î¬ÌØÕ÷ÏòÁ¿ (L2¹éÒ»»¯)
-    ¡ý
-[ÓàÏÒÏàËÆ¶È¼ÆËã] ¡ú Ê¶±ð½á¹û
+è¯†åˆ«é˜¶æ®µ:
+å¾…è¯†åˆ«ç…§ç‰‡ â†’ æ¨¡åž‹ â†’ æå–512ç»´ç‰¹å¾å‘é‡ â†’ è®¡ç®—ä¸Žæ•°æ®åº“ä¸­æ‰€æœ‰ç‰¹å¾çš„ç›¸ä¼¼åº¦ â†’ è¿”å›žæœ€ç›¸ä¼¼çš„äºº
 ```
 
-### ¹Ø¼ü×é¼þ
+### å·¥ä½œæµç¨‹
 
-| ×é¼þ | ×÷ÓÃ | È¨ÖØÀ´Ô´ |
+1. **æ¨¡åž‹æƒé‡å›ºå®š**: ä½¿ç”¨ä½ è®­ç»ƒå¥½çš„`.pt`æ–‡ä»¶ï¼Œæƒé‡ä¸å†æ”¹å˜
+2. **æå–ç‰¹å¾**: æ¨¡åž‹å°†äººè„¸å›¾åƒè½¬æ¢ä¸º512ç»´å‘é‡
+3. **å­˜å‚¨ç‰¹å¾**: ç‰¹å¾å‘é‡ä¿å­˜åœ¨æ•°æ®åº“ä¸­
+4. **ç›¸ä¼¼åº¦åŒ¹é…**: è¯†åˆ«æ—¶è®¡ç®—ä½™å¼¦ç›¸ä¼¼åº¦ï¼Œæ‰¾åˆ°æœ€ç›¸ä¼¼çš„äºº
+
+**ç±»æ¯”ç†è§£ï¼š**
+- æ¨¡åž‹å°±åƒä¸€ä¸ª"ç‰¹å¾æå–å™¨"ï¼ˆå›ºå®šä¸å˜ï¼‰
+- æ¯ä¸ªäººçš„ç‰¹å¾å°±åƒ"æŒ‡çº¹"ï¼ˆç‹¬ä¸€æ— äºŒï¼‰
+- è¯†åˆ«å°±æ˜¯"æŒ‡çº¹æ¯”å¯¹"ï¼ˆè®¡ç®—ç›¸ä¼¼åº¦ï¼‰
+
+### è®ºæ–‡æ¨¡åž‹æž¶æž„
+
+```
+è¾“å…¥å›¾åƒ (160Ã—160)
+    â†“
+[MTCNNæ£€æµ‹] â† æ£€æµ‹å¹¶å¯¹é½äººè„¸
+    â†“
+[å§¿æ€ä¼°è®¡ - Hopenet] â†’ yawè§’åº¦
+    â†“
+  åˆ¤æ–­å§¿æ€
+    â”œâ”€ yaw < 30Â° â†’ [æ­£é¢åˆ†æ”¯ - InceptionResnetV1_f]
+    â””â”€ yaw > 30Â° â†’ [ä¾§é¢åˆ†æ”¯ - InceptionResnetV1_p]
+                      â†“
+                   [CBAMæ³¨æ„åŠ›å¢žå¼º]
+    â†“
+512ç»´ç‰¹å¾å‘é‡ (L2å½’ä¸€åŒ–)
+    â†“
+[ä½™å¼¦ç›¸ä¼¼åº¦è®¡ç®—] â†’ è¯†åˆ«ç»“æžœ
+```
+
+### å…³é”®ç»„ä»¶
+
+| ç»„ä»¶ | ä½œç”¨ | æƒé‡æ¥æº |
 |------|------|----------|
-| **MTCNN** | ÈËÁ³¼ì²âºÍ¶ÔÆë | Ô¤ÑµÁ·£¨TensorFlow×ª»»£© |
-| **Hopenet** | ×ËÌ¬¹À¼Æ£¨yaw½Ç¶È£© | `hopenet_robust_alpha1.pkl` |
-| **InceptionResnetV1_f** | ÕýÃæÈËÁ³ÌØÕ÷ÌáÈ¡ | VGGFace2Ô¤ÑµÁ· + ÄãµÄÑµÁ· |
-| **InceptionResnetV1_p** | ²àÃæÈËÁ³ÌØÕ÷ÌáÈ¡ | VGGFace2Ô¤ÑµÁ· + ÄãµÄÑµÁ· |
-| **CBAM** | ×¢ÒâÁ¦»úÖÆ£¨ÔöÇ¿²àÃæÌØÕ÷£© | ¼¯³ÉÔÚÑµÁ·ÖÐ |
+| **MTCNN** | äººè„¸æ£€æµ‹å’Œå¯¹é½ | é¢„è®­ç»ƒï¼ˆTensorFlowè½¬æ¢ï¼‰ |
+| **Hopenet** | å§¿æ€ä¼°è®¡ï¼ˆyawè§’åº¦ï¼‰ | `hopenet_robust_alpha1.pkl` |
+| **InceptionResnetV1_f** | æ­£é¢äººè„¸ç‰¹å¾æå– | VGGFace2é¢„è®­ç»ƒ + ä½ çš„è®­ç»ƒ |
+| **InceptionResnetV1_p** | ä¾§é¢äººè„¸ç‰¹å¾æå– | VGGFace2é¢„è®­ç»ƒ + ä½ çš„è®­ç»ƒ |
+| **CBAM** | æ³¨æ„åŠ›æœºåˆ¶ï¼ˆå¢žå¼ºä¾§é¢ç‰¹å¾ï¼‰ | é›†æˆåœ¨è®­ç»ƒä¸­ |
 
-## ? ÐÔÄÜÓÅ»¯
+## æ€§èƒ½ä¼˜åŒ–
 
-### 1. Ä£ÐÍÓÅ»¯
-- Ê¹ÓÃGPU¼ÓËÙ£¨×Ô¶¯¼ì²â£©
-- ÅúÁ¿´¦ÀíÍ¼Ïñ
-- Ä£ÐÍÁ¿»¯£¨¿ÉÑ¡£©
+### 1. æ¨¡åž‹ä¼˜åŒ–
+- ä½¿ç”¨GPUåŠ é€Ÿï¼ˆè‡ªåŠ¨æ£€æµ‹ï¼‰
+- æ‰¹é‡å¤„ç†å›¾åƒ
+- æ¨¡åž‹é‡åŒ–ï¼ˆå¯é€‰ï¼‰
 
-### 2. Êý¾Ý¿âÓÅ»¯
-- Ê¹ÓÃnumpyÅúÁ¿¼ÆËãÏàËÆ¶È
-- ½¨Á¢Ë÷Òý¼ÓËÙËÑË÷
-- ¶¨ÆÚÇåÀíÎÞÐ§Êý¾Ý
+### 2. æ•°æ®åº“ä¼˜åŒ–
+- ä½¿ç”¨numpyæ‰¹é‡è®¡ç®—ç›¸ä¼¼åº¦
+- å»ºç«‹ç´¢å¼•åŠ é€Ÿæœç´¢
+- å®šæœŸæ¸…ç†æ— æ•ˆæ•°æ®
 
-### 3. Ç°¶ËÓÅ»¯
-- Í¼ÏñÑ¹ËõºóÔÙÉÏ´«
-- Ê¹ÓÃWeb Workers´¦ÀíÍ¼Ïñ
-- ÀÁ¼ÓÔØÊý¾Ý¿âÁÐ±í
+### 3. å‰ç«¯ä¼˜åŒ–
+- å›¾åƒåŽ‹ç¼©åŽå†ä¸Šä¼ 
+- ä½¿ç”¨Web Workerså¤„ç†å›¾åƒ
+- æ‡’åŠ è½½æ•°æ®åº“åˆ—è¡¨
 
-## ? ³£¼ûÎÊÌâ
+## å¸¸è§é—®é¢˜
 
-### Q1: Ä£ÐÍ¼ÓÔØÊ§°Ü
-**A**: ¼ì²éÈ¨ÖØÎÄ¼þÂ·¾¶ºÍ¸ñÊ½£¬È·±£ËùÓÐÒÀÀµÄ£¿é¶¼ÒÑ¸´ÖÆ
+### Q1: æ¨¡åž‹åŠ è½½å¤±è´¥
+**A**: æ£€æŸ¥æƒé‡æ–‡ä»¶è·¯å¾„å’Œæ ¼å¼ï¼Œç¡®ä¿æ‰€æœ‰ä¾èµ–æ¨¡å—éƒ½å·²å¤åˆ¶
 
-### Q2: MTCNN¼ì²â²»µ½ÈËÁ³
-**A**: µ÷ÕûãÐÖµ²ÎÊý£¬È·±£ÈËÁ³ÇåÎúÇÒ³ß´ç > 40px
+### Q2: MTCNNæ£€æµ‹ä¸åˆ°äººè„¸
+**A**: è°ƒæ•´é˜ˆå€¼å‚æ•°ï¼Œç¡®ä¿äººè„¸æ¸…æ™°ä¸”å°ºå¯¸ > 40px
 
-### Q3: Ê¶±ð×¼È·ÂÊµÍ
+### Q3: è¯†åˆ«å‡†ç¡®çŽ‡ä½Ž
 **A**: 
-- Ìá¸ßÏàËÆ¶ÈãÐÖµ
-- Â¼Èë¶àÕÅ²»Í¬½Ç¶ÈµÄÕÕÆ¬
-- È·±£ÕÕÆ¬ÖÊÁ¿£¨ÇåÎú¡¢¹âÏß³ä×ã£©
+- æé«˜ç›¸ä¼¼åº¦é˜ˆå€¼
+- å½•å…¥å¤šå¼ ä¸åŒè§’åº¦çš„ç…§ç‰‡
+- ç¡®ä¿ç…§ç‰‡è´¨é‡ï¼ˆæ¸…æ™°ã€å…‰çº¿å……è¶³ï¼‰
 
-### Q4: ÄÚ´æÕ¼ÓÃ¹ý¸ß
-**A**: ÏÞÖÆÊý¾Ý¿â´óÐ¡£¬¶¨ÆÚÇåÀí£¬Ê¹ÓÃ¸üÐ¡µÄbatch size
+### Q4: å†…å­˜å ç”¨è¿‡é«˜
+**A**: é™åˆ¶æ•°æ®åº“å¤§å°ï¼Œå®šæœŸæ¸…ç†ï¼Œä½¿ç”¨æ›´å°çš„batch size
 
-## ? ÏµÍ³Ö¸±ê
+## ç³»ç»ŸæŒ‡æ ‡
 
-- **Ê¶±ðËÙ¶È**: ~100ms/ÕÅ (GPU)
-- **×¼È·ÂÊ**: ÕýÃæ >95%, ²àÃæ >90%
-- **Ö§³ÖÈËÁ³Êý**: ÀíÂÛÎÞÏÞÖÆ£¬ÍÆ¼ö <10000
-- **²¢·¢Ö§³Ö**: ¸ù¾Ý·þÎñÆ÷ÅäÖÃ
+- **è¯†åˆ«é€Ÿåº¦**: ~100ms/å¼  (GPU)
+- **å‡†ç¡®çŽ‡**: æ­£é¢ >95%, ä¾§é¢ >90%
+- **æ”¯æŒäººè„¸æ•°**: ç†è®ºæ— é™åˆ¶ï¼ŒæŽ¨è <10000
+- **å¹¶å‘æ”¯æŒ**: æ ¹æ®æœåŠ¡å™¨é…ç½®
 
-## ? °²È«½¨Òé
+## å®‰å…¨å»ºè®®
 
-1. Ìí¼ÓÓÃ»§ÈÏÖ¤
-2. Ê¹ÓÃHTTPS´«Êä
-3. ÏÞÖÆÉÏ´«ÎÄ¼þ´óÐ¡
-4. ·ÀÖ¹SQL×¢Èë£¨ÈçÊ¹ÓÃÊý¾Ý¿â£©
-5. ¶¨ÆÚ±¸·ÝÊý¾Ý
+1. æ·»åŠ ç”¨æˆ·è®¤è¯
+2. ä½¿ç”¨HTTPSä¼ è¾“
+3. é™åˆ¶ä¸Šä¼ æ–‡ä»¶å¤§å°
+4. é˜²æ­¢SQLæ³¨å…¥ï¼ˆå¦‚ä½¿ç”¨æ•°æ®åº“ï¼‰
+5. å®šæœŸå¤‡ä»½æ•°æ®
 
-## ? À©Õ¹¹¦ÄÜ½¨Òé
+## æ‰©å±•åŠŸèƒ½å»ºè®®
 
-1. **»îÌå¼ì²â** - ·ÀÖ¹ÕÕÆ¬ÆÛÆ­
-2. **ÊÓÆµÁ÷Ê¶±ð** - ÊµÊ±ÉãÏñÍ·Ê¶±ð
-3. **¶àÄ£ÐÍÈÚºÏ** - Ìá¸ß×¼È·ÂÊ
-4. **±ßÔµ²¿Êð** - ÒÆ¶¯¶Ë/Ç¶ÈëÊ½Éè±¸
-5. **ÈËÁ³ÊôÐÔ·ÖÎö** - ÄêÁä¡¢ÐÔ±ð¡¢ÇéÐ÷
+1. **æ´»ä½“æ£€æµ‹** - é˜²æ­¢ç…§ç‰‡æ¬ºéª—
+2. **è§†é¢‘æµè¯†åˆ«** - å®žæ—¶æ‘„åƒå¤´è¯†åˆ«
+3. **å¤šæ¨¡åž‹èžåˆ** - æé«˜å‡†ç¡®çŽ‡
+4. **è¾¹ç¼˜éƒ¨ç½²** - ç§»åŠ¨ç«¯/åµŒå…¥å¼è®¾å¤‡
+5. **äººè„¸å±žæ€§åˆ†æž** - å¹´é¾„ã€æ€§åˆ«ã€æƒ…ç»ª
 
-## ? License
+## License
 
-±¾ÏîÄ¿»ùÓÚÔ­ÂÛÎÄ¿ªÔ´´úÂëÊµÏÖ£¬½ö¹©Ñ§Ï°ÑÐ¾¿Ê¹ÓÃ¡£
+æœ¬é¡¹ç›®åŸºäºŽåŽŸè®ºæ–‡å¼€æºä»£ç å®žçŽ°ï¼Œä»…ä¾›å­¦ä¹ ç ”ç©¶ä½¿ç”¨ã€‚
+
